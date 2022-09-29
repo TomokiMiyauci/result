@@ -20,7 +20,7 @@ Containers are designed to be the smallest and most self-contained.
 Ok container is created with `Result#ok`. Accepts any value.
 
 ```ts
-import { Result } from "https://deno.land/x/result_js/mod.ts";
+import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
 const result = Result.ok("any success value");
 ```
 
@@ -29,7 +29,7 @@ const result = Result.ok("any success value");
 Err container is created with `Result#err`. Accepts any value.
 
 ```ts
-import { Result } from "https://deno.land/x/result_js/mod.ts";
+import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
 const result = Result.err("any error value");
 ```
 
@@ -38,7 +38,7 @@ const result = Result.err("any error value");
 The `Result` defines OK on the left and error on the right.
 
 ```ts
-import { Result } from "https://deno.land/x/result_js/mod.ts";
+import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
 
 function div(left: number, right: number): Result<number, RangeError> {
   if (right === 0) {
@@ -56,7 +56,7 @@ The container has `isOk` method. This allows you to identify `Ok` containers and
 The custom type guard narrows down the type of the container.
 
 ```ts
-import { Result } from "https://deno.land/x/result_js/mod.ts";
+import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
 declare const result: Result<number, RangeError>;
 
 if (result.isOk()) {
@@ -67,6 +67,42 @@ if (result.isOk()) {
 ```
 
 These are all the functions of a container.
+
+## Handle dangerous code
+
+Wrap code that may throw errors in a container.
+
+```ts
+import { unsafe } from "https://deno.land/x/result_js@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+
+const result = unsafe(() => {
+  throw Error("Dangerous!!");
+});
+assertEquals(result.value, Error());
+assertEquals(result.isOk(), false);
+```
+
+By default, the Err container value is of type `unknown`. If you know more about
+the error being thrown, you can give a more detailed type.
+
+For example, instantiation of `Headers` is known to throw `TypeError`.
+
+```ts
+import { unsafe } from "https://deno.land/x/result_js@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+
+const result = unsafe<Headers, TypeError>(() =>
+  new Headers({ "?": "invalid field name" })
+);
+assertEquals(result.value, new TypeError());
+```
+
+> You would have wanted to specify only the type of error.
+> `unsafe<TypeError>(() => new Headers());` Unfortunately, this is not possible.
+> TypeScript will only allow partial generics to be specified if The remaining
+> generics become default type arguments. For that reason, `unsafe` accepts the
+> type `Ok` on the left and `Err` on the right.
 
 ## API
 
