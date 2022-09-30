@@ -4,16 +4,51 @@ The standard API for result in JavaScript.
 
 ## What
 
-It brings a standard Result type to the JavaScript world.
+It brings a standard Result representation to the JavaScript world.
 
-Provides a new standard way of error handling.
+Provides an API for complete representation of two states representing success
+and failure.
 
-Containers are designed to be the smallest and most self-contained.
+Our goal is to become the standard error handling method for third-party
+libraries.
+
+It has the following features:
+
+- Simple and lean
+
+  Designed to be used as client JavaScript (Off Course server side). It provides
+  an API that is as small and lean as possible. There is not a single useless
+  API for you to use.
+
+- `Ok` and `Err`
+
+  The `Result` consists of two containers, `Ok` and `Err`. The naming is
+  inspired by
+  [Rust::std:Result](https://doc.rust-lang.org/std/result/enum.Result.html#) and
+  is short and easy to understand.
+
+- Self-contained
+
+  `Result` is self-contained. This means that type declarations, container
+  creation, retrieval of values from containers, and comparison of container
+  types are provided by `Result`.
+
+If you want to know more, see [Definition](./specs/api.md).
 
 ### What is not
 
-- Not a Monad
-- Not a Rust::std::result
+Client JavaScript is a special execution environment. Unnecessary API bloat is
+reflected in bundle size, to the detriment of users.
+
+Unfortunately, being a dynamic language, JavaScript tree-shaking has its
+limitations.
+
+Therefore, intentionally, it does not have the following features.
+
+- Monad laws
+- Rust::std::result like
+
+These may include some APIs that are not used for all libraries.
 
 ## Create Ok(success) container
 
@@ -50,10 +85,8 @@ function div(left: number, right: number): Result<number, RangeError> {
 
 ## Retrieving values from containers
 
-The container has `isOk` method. This allows you to identify `Ok` containers and
-`Err` containers.
-
-The custom type guard narrows down the type of the container.
+The container has a `type` that represents the type of its own container. This
+allows you to identify `Ok` containers and `Err` containers.
 
 ```ts
 import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
