@@ -1,14 +1,32 @@
 import { Result } from "./results.ts";
 import { ErrContainer, OkContainer, ResultContainer } from "./types.ts";
 
-/** Whether the {@link ResultContainer } is {@link OkContainer} or not. */
+/** Whether the {@link ResultContainer } is {@link OkContainer} or not.
+ *
+ * ```ts
+ * import { isOk, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ *
+ * assertEquals(isOk(Result.ok("OK!!")), true);
+ * assertEquals(isOk(Result.err("Error!!")), false);
+ * ```
+ */
 export function isOk<T, E>(
   resultContainer: ResultContainer<T, E>,
 ): resultContainer is OkContainer<T> {
   return resultContainer.type === "ok";
 }
 
-/** Whether the {@link ResultContainer } is {@link ErrContainer} or not. */
+/** Whether the {@link ResultContainer } is {@link ErrContainer} or not.
+ *
+ * ```ts
+ * import { isErr, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
+ * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+ *
+ * assertEquals(isErr(Result.err("Error!!")), true);
+ * assertEquals(isErr(Result.ok("OK!!")), false);
+ * ```
+ */
 export function isErr<T, E>(
   resultContainer: ResultContainer<T, E>,
 ): resultContainer is ErrContainer<E> {
