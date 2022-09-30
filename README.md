@@ -1,5 +1,14 @@
 # result-js
 
+[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/result_js)
+[![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/result_js/mod.ts)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/result)](https://github.com/TomokiMiyauci/result-js/releases)
+[![codecov](https://codecov.io/gh/TomokiMiyauci/result-js/branch/main/graph/badge.svg?token=nQZ8Nnx3KH)](https://codecov.io/gh/TomokiMiyauci/result-js)
+[![GitHub](https://img.shields.io/github/license/TomokiMiyauci/result-js)](https://github.com/TomokiMiyauci/result-js/blob/main/LICENSE)
+
+[![test](https://github.com/TomokiMiyauci/result-js/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/result-js/actions/workflows/test.yaml)
+[![NPM](https://nodei.co/npm/TomokiMiyauci/resultjs.png?mini=true)](https://nodei.co/npm/TomokiMiyauci/resultjs/)
+
 The standard API for result in JavaScript.
 
 ## What
