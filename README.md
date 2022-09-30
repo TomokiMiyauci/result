@@ -59,7 +59,7 @@ The custom type guard narrows down the type of the container.
 import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
 declare const result: Result<number, RangeError>;
 
-if (result.isOk()) {
+if (result.type === "ok") {
   result.value;
 } else {
   result.value;
@@ -80,7 +80,7 @@ const result = unsafe(() => {
   throw Error("Dangerous!!");
 });
 assertEquals(result.value, Error());
-assertEquals(result.isOk(), false);
+assertEquals(result.type, "err");
 ```
 
 By default, the Err container value is of type `unknown`. If you know more about

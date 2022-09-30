@@ -7,7 +7,7 @@ describe("unsafe", () => {
       throw Error();
     });
     assertEquals(result.value, Error());
-    assertEquals(result.isOk(), false);
+    assertEquals(result.type, "err");
   });
 
   it("should return err container when the function throw any error", () => {
@@ -22,12 +22,12 @@ describe("unsafe", () => {
       return 0;
     });
     assertEquals(result.value, 0);
-    assertEquals(result.isOk(), true);
+    assertEquals(result.type, "ok");
   });
 
   it("should return ok container when the function return undefined", () => {
     const result = unsafe(() => {});
     assertEquals(result.value, undefined);
-    assertEquals(result.isOk(), true);
+    assertEquals(result.type, "ok");
   });
 });

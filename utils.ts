@@ -10,7 +10,7 @@ import { Result } from "./results.ts";
  *   throw Error("Dangerous!!");
  * });
  * assertEquals(result.value, Error());
- * assertEquals(result.isOk(), false);
+ * assertEquals(result.type, "err");
  * ```
  */
 export function unsafe<T, E>(
