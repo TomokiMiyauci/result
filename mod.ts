@@ -1,3 +1,6 @@
+// Copyright 2022-latest TomokiMiyauci. All rights reserved. MIT license.
+// This module is browser compatible.
+
 export { Result } from "./results.ts";
 export {
   type Container,
