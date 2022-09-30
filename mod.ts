@@ -6,4 +6,4 @@ export {
   type ResultConstructor,
   type ResultContainer,
 } from "./types.ts";
-export { match, unsafe } from "./utils.ts";
+export { match, type Patterns, unsafe } from "./utils.ts";

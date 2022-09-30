@@ -104,6 +104,22 @@ assertEquals(result.value, new TypeError());
 > generics become default type arguments. For that reason, `unsafe` accepts the
 > type `Ok` on the left and `Err` on the right.
 
+## Pattern matching
+
+It provides an interface similar to pattern matching in functional programming
+languages.
+
+```ts
+import { match, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+
+const value = match(Result.ok("Tom"), {
+  ok: (value) => "Hello " + value,
+  err: (value) => "Goodby " + value,
+});
+assertEquals(value, "Hello Tom");
+```
+
 ## API
 
 All APIs can be found in the
