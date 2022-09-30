@@ -1,4 +1,4 @@
-export { Err, Ok, Result } from "./results.ts";
+export { Result } from "./results.ts";
 export {
   type Container,
   type ErrContainer,

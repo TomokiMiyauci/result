@@ -22,14 +22,14 @@ export const Result: ResultConstructor = {
 };
 
 /** Contains the success value. */
-export class Ok<T> implements OkContainer<T> {
+class Ok<T> implements OkContainer<T> {
   constructor(public value: T) {}
 
   type = "ok" as const;
 }
 
 /** Contains the failure value. */
-export class Err<E> implements ErrContainer<E> {
+class Err<E> implements ErrContainer<E> {
   constructor(public value: E) {}
 
   type = "err" as const;
