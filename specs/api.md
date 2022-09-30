@@ -8,7 +8,7 @@
 - Err container representing failure. The type of the container is `err`.
 - Result container is a set of Ok container and Err container.
 
-## Interface
+## Signature
 
 A container is one that satisfies the following interfaces.
 
