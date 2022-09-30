@@ -1,3 +1,6 @@
+// Copyright 2022-latest TomokiMiyauci. All rights reserved. MIT license.
+// This module is browser compatible.
+
 import { Result } from "./results.ts";
 import { ErrContainer, OkContainer, ResultContainer } from "./types.ts";
 
