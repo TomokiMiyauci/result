@@ -1,5 +1,5 @@
 import { Result } from "./results.ts";
-import { match, unsafe } from "./utils.ts";
+import { isErr, isOk, match, unsafe } from "./utils.ts";
 import {
   assertEquals,
   assertSpyCall,
@@ -84,5 +84,35 @@ describe("match", () => {
       err: (value) => "Goodby " + value,
     });
     assertEquals(value, "Hello Tom");
+  });
+});
+
+describe("isOk", () => {
+  it("should return true when the result container is Ok container", () => {
+    assertEquals(isOk({ type: "ok", value: undefined }), true);
+  });
+
+  it("should return false when the result container is not Ok container", () => {
+    assertEquals(isOk({ type: "err", value: undefined }), false);
+  });
+
+  it("should pass example", () => {
+    assertEquals(isOk(Result.ok("OK!!")), true);
+    assertEquals(isOk(Result.err("Error!!")), false);
+  });
+});
+
+describe("isErr", () => {
+  it("should return true when the result container is Err container", () => {
+    assertEquals(isErr({ type: "err", value: undefined }), true);
+  });
+
+  it("should return false when the result container is not Err container", () => {
+    assertEquals(isErr({ type: "ok", value: undefined }), false);
+  });
+
+  it("should pass example", () => {
+    assertEquals(isErr(Result.err("Error!!")), true);
+    assertEquals(isErr(Result.ok("OK!!")), false);
   });
 });
