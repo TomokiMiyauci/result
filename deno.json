@@ -17,7 +17,7 @@
   },
   "test": {
     "files": {
-      "exclude": ["CHANGELOG.md", "CODE_OF_CONDUCT.md"]
+      "exclude": ["CHANGELOG.md", "CODE_OF_CONDUCT.md", "specs/api.md"]
     }
   },
   "importMap": "_test_import_map.json"
