@@ -7,7 +7,7 @@ export const makeOptions = (version: string): BuildOptions => ({
   entryPoints: ["./mod.ts"],
   outDir: "./npm",
   package: {
-    name: "resultjs",
+    name: "@miyauci/result",
     version,
     description: "The standard API for result in JavaScript",
     keywords: [
@@ -33,6 +33,9 @@ export const makeOptions = (version: string): BuildOptions => ({
     },
     sideEffects: false,
     type: "module",
+    publishConfig: {
+      access: "public",
+    },
   },
   packageManager: "pnpm",
 });
