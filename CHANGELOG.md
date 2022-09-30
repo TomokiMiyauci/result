@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](https://github.com/TomokiMiyauci/result-js/compare/1.0.0-beta.1...1.0.0-beta.2) (2022-09-30)
+
+
+### Bug Fixes
+
+* **results:** not export internal implementation ([7d1a97a](https://github.com/TomokiMiyauci/result-js/commit/7d1a97adec0a94824ffc60746889b1e3d5483c22))
+
 # 1.0.0-beta.1 (2022-09-30)
 
 
