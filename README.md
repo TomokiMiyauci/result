@@ -74,12 +74,12 @@ Err container is created with `Result#err`. Accepts any value.
 
 ```ts
 import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
-const result = Result.err("any error value");
+const result = Result.err("any failure value");
 ```
 
 ## Define a container as the return value
 
-The `Result` defines OK on the left and error on the right.
+The `Result` defines OK on the left and failure on the right.
 
 ```ts
 import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
