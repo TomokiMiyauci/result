@@ -48,7 +48,7 @@ export function isErr<T, E>(
  */
 export function unsafe<T, E>(
   fn: () => T,
-): Result<T, E> {
+): ResultContainer<T, E> {
   try {
     return Result.ok(fn());
   } catch (e) {
@@ -79,8 +79,10 @@ export interface Patterns<T, E, U> {
  * ```
  */
 export function match<T, E, U>(
-  result: Result<T, E>,
+  resultContainer: ResultContainer<T, E>,
   patterns: Patterns<T, E, U>,
 ): U {
-  return isOk(result) ? patterns.ok(result.value) : patterns.err(result.value);
+  return isOk(resultContainer)
+    ? patterns.ok(resultContainer.value)
+    : patterns.err(resultContainer.value);
 }
