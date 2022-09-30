@@ -5,7 +5,7 @@ import {
   ResultContainer,
 } from "./types.ts";
 
-/** {@link Result} is a type that represents either success ({@link Ok}) or failure ({@link Err}). */
+/** {@link Result} is a type that represents either success ({@link OkContainer}) or failure ({@link ErrContainer}). */
 export type Result<T, E> = ResultContainer<T, E>;
 
 /** Represents either success or failure result.
