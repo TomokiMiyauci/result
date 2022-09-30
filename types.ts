@@ -28,7 +28,7 @@ export interface ErrContainer<E> extends Container {
 /** Result container API. */
 export type ResultContainer<T, E> = OkContainer<T> | ErrContainer<E>;
 
-/** Result container constructor. */
+/** Result constructor. */
 export interface ResultConstructor {
   /** Create a new {@link OkContainer}. */
   ok: <T>(value: T) => OkContainer<T>;
