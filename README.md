@@ -120,6 +120,34 @@ const value = match(Result.ok("Tom"), {
 assertEquals(value, "Hello Tom");
 ```
 
+## Validate container
+
+Provides a function to check the type of container with Type guard.
+
+### isOk
+
+Whether the `ResultContainer` is `OkContainer` or not.
+
+```ts
+import { isOk, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+
+assertEquals(isOk(Result.ok("OK!!")), true);
+assertEquals(isOk(Result.err("Error!!")), false);
+```
+
+### isErr
+
+Whether the `ResultContainer` is `ErrContainer` or not.
+
+```ts
+import { isErr, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
+import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
+
+assertEquals(isErr(Result.err("Error!!")), true);
+assertEquals(isErr(Result.ok("OK!!")), false);
+```
+
 ## API
 
 All APIs can be found in the

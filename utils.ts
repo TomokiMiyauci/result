@@ -1,6 +1,19 @@
 import { Result } from "./results.ts";
-// deno-lint-ignore no-unused-vars
-import { ErrContainer, OkContainer } from "./types.ts";
+import { ErrContainer, OkContainer, ResultContainer } from "./types.ts";
+
+/** Whether the {@link ResultContainer } is {@link OkContainer} or not. */
+export function isOk<T, E>(
+  resultContainer: ResultContainer<T, E>,
+): resultContainer is OkContainer<T> {
+  return resultContainer.type === "ok";
+}
+
+/** Whether the {@link ResultContainer } is {@link ErrContainer} or not. */
+export function isErr<T, E>(
+  resultContainer: ResultContainer<T, E>,
+): resultContainer is ErrContainer<E> {
+  return resultContainer.type === "err";
+}
 
 /** Wrap code that may throw errors in a container.
  *
@@ -51,7 +64,5 @@ export function match<T, E, U>(
   result: Result<T, E>,
   patterns: Patterns<T, E, U>,
 ): U {
-  return result.type === "ok"
-    ? patterns.ok(result.value)
-    : patterns.err(result.value);
+  return isOk(result) ? patterns.ok(result.value) : patterns.err(result.value);
 }
