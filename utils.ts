@@ -1,4 +1,4 @@
-// Copyright 2022-latest TomokiMiyauci. All rights reserved. MIT license.
+// Copyright 2022-latest Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
 import { Result } from "./results.ts";
@@ -6,6 +6,7 @@ import { ErrContainer, OkContainer, ResultContainer } from "./types.ts";
 
 /** Whether the {@link ResultContainer } is {@link OkContainer} or not.
  *
+ * @example
  * ```ts
  * import { isOk, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
@@ -22,6 +23,7 @@ export function isOk<T, E>(
 
 /** Whether the {@link ResultContainer } is {@link ErrContainer} or not.
  *
+ * @example
  * ```ts
  * import { isErr, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
@@ -38,6 +40,7 @@ export function isErr<T, E>(
 
 /** Wrap code that may throw errors in a container.
  *
+ * @example
  * ```ts
  * import { unsafe } from "https://deno.land/x/result_js@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";
@@ -70,6 +73,7 @@ export interface Patterns<T, E, U> {
 
 /** Pattern matching for {@link Result}.
  *
+ * @example
  * ```ts
  * import { match, Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
  * import { assertEquals } from "https://deno.land/std@$VERSION/testing/asserts.ts";

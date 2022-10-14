@@ -197,7 +197,7 @@ All APIs can be found in the
 
 ## License
 
-Copyright © 2022-present [TomokiMiyauci](https://github.com/TomokiMiyauci).
+Copyright © 2022-present [Tomoki Miyauchi](https://github.com/TomokiMiyauci).
 
 Released under the [MIT](./LICENSE) license
 

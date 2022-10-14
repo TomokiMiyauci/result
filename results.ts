@@ -1,4 +1,4 @@
-// Copyright 2022-latest TomokiMiyauci. All rights reserved. MIT license.
+// Copyright 2022-latest Tomoki Miyauchi. All rights reserved. MIT license.
 // This module is browser compatible.
 
 import {
@@ -13,6 +13,7 @@ export type Result<T, E> = ResultContainer<T, E>;
 
 /** Represents either success or failure result.
  *
+ * @example
  * ```ts
  * import { Result } from "https://deno.land/x/result_js@$VERSION/mod.ts";
  * const ok = Result.ok("any success value");
