@@ -4,7 +4,7 @@
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/result_js/mod.ts)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/result-js)](https://github.com/TomokiMiyauci/result-js/releases)
 [![codecov](https://codecov.io/github/TomokiMiyauci/result-js/branch/main/graph/badge.svg?token=xCMzpv1veg)](https://codecov.io/github/TomokiMiyauci/result-js)
-[![npm bundle size](https://img.shields.io/bundlephobia/minzip/@miyauci/result)](https://bundlephobia.com/package/@miyauci/result)
+[![bundle size](https://bundlejs.com/api/badge?q=https://deno.land/x/result_js/mod.ts)](https://bundlejs.com/?q=https%3A%2F%2Fdeno.land%2Fx%2Fresult_js%2Fmod.ts)
 [![GitHub](https://img.shields.io/github/license/TomokiMiyauci/result-js)](https://github.com/TomokiMiyauci/result-js/blob/main/LICENSE)
 
 [![test](https://github.com/TomokiMiyauci/result-js/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/result-js/actions/workflows/test.yaml)
