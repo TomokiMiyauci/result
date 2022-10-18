@@ -1,42 +1,8 @@
-# 1.0.0 (2022-10-15)
-
-
-### Bug Fixes
-
-* **results:** not export internal implementation ([e747c02](https://github.com/TomokiMiyauci/result-js/commit/e747c028af7c4e0396a15540d482fe3aa8f774d0))
-
-
-### Features
-
-* **results:** add minimum `Result` definition ([453ef9a](https://github.com/TomokiMiyauci/result-js/commit/453ef9aa14e6b8fd6702c82084724520d2cce33a))
-* **types:** re-define container types ([583faa4](https://github.com/TomokiMiyauci/result-js/commit/583faa4a790a63a2f2ef84f5b17b6a14396de385))
-* **utils:** add `isOk` and `isErr` function ([6190e3c](https://github.com/TomokiMiyauci/result-js/commit/6190e3cb57660cd841d4301865d6b5c920bf972e))
-* **utils:** add `match` function that provide pattern matching ([0659cf2](https://github.com/TomokiMiyauci/result-js/commit/0659cf2b053c5b1e2a992adbc7fcf57dd1de668a))
-* **utils:** add `unsafe` function that handle dangerous code and convert to container ([0d9e540](https://github.com/TomokiMiyauci/result-js/commit/0d9e540bd67dae4bff258de0140c0832d9102dc4))
-
-# 1.0.0 (2022-10-14)
-
-
-### Bug Fixes
-
-* **results:** not export internal implementation ([e747c02](https://github.com/TomokiMiyauci/result-js/commit/e747c028af7c4e0396a15540d482fe3aa8f774d0))
-
-
-### Features
-
-* **results:** add minimum `Result` definition ([453ef9a](https://github.com/TomokiMiyauci/result-js/commit/453ef9aa14e6b8fd6702c82084724520d2cce33a))
-* **types:** re-define container types ([583faa4](https://github.com/TomokiMiyauci/result-js/commit/583faa4a790a63a2f2ef84f5b17b6a14396de385))
-* **utils:** add `isOk` and `isErr` function ([6190e3c](https://github.com/TomokiMiyauci/result-js/commit/6190e3cb57660cd841d4301865d6b5c920bf972e))
-* **utils:** add `match` function that provide pattern matching ([0659cf2](https://github.com/TomokiMiyauci/result-js/commit/0659cf2b053c5b1e2a992adbc7fcf57dd1de668a))
-* **utils:** add `unsafe` function that handle dangerous code and convert to container ([0d9e540](https://github.com/TomokiMiyauci/result-js/commit/0d9e540bd67dae4bff258de0140c0832d9102dc4))
-
 # 1.0.0 (2022-09-30)
-
 
 ### Bug Fixes
 
 * **results:** not export internal implementation ([7d1a97a](https://github.com/TomokiMiyauci/result-js/commit/7d1a97adec0a94824ffc60746889b1e3d5483c22))
-
 
 ### Features
 
@@ -48,13 +14,11 @@
 
 # [1.0.0-beta.2](https://github.com/TomokiMiyauci/result-js/compare/1.0.0-beta.1...1.0.0-beta.2) (2022-09-30)
 
-
 ### Bug Fixes
 
 * **results:** not export internal implementation ([7d1a97a](https://github.com/TomokiMiyauci/result-js/commit/7d1a97adec0a94824ffc60746889b1e3d5483c22))
 
 # 1.0.0-beta.1 (2022-09-30)
-
 
 ### Features
 
