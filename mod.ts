@@ -23,7 +23,7 @@
  * - {@linkcode unwrapErr} throws with a generic message
  *
  * ## Transforming contained values
- * Transforms the contained value of the {@linkcoce Ok}:
+ * Transforms the contained value of the {@linkcode Ok}:
  * - {@linkcode map} transforms {@linkcode Result<T, E>} into {@linkcode Result<U, E>} by applying the provided function to the contained value of {@linkcode Ok} and leaving {@linkcode Err}
  *
  * Transforms the contained value of the {@linkcode Err}:
