@@ -1,17 +1,19 @@
-# result-js
+# result
 
 [![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/result_js)
 [![deno doc](https://doc.deno.land/badge.svg)](https://deno.land/x/result_js?doc)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/result-js)](https://github.com/TomokiMiyauci/result-js/releases)
-[![codecov](https://codecov.io/github/TomokiMiyauci/result-js/branch/main/graph/badge.svg)](https://codecov.io/github/TomokiMiyauci/result-js)
-[![GitHub](https://img.shields.io/github/license/TomokiMiyauci/result-js)](LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/TomokiMiyauci/result)](https://github.com/TomokiMiyauci/result/releases)
+[![codecov](https://codecov.io/github/TomokiMiyauci/result/branch/main/graph/badge.svg)](https://codecov.io/github/TomokiMiyauci/result)
+[![GitHub](https://img.shields.io/github/license/TomokiMiyauci/result)](LICENSE)
 
-[![test](https://github.com/TomokiMiyauci/result-js/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/result-js/actions/workflows/test.yaml)
+[![test](https://github.com/TomokiMiyauci/result/actions/workflows/test.yaml/badge.svg)](https://github.com/TomokiMiyauci/result/actions/workflows/test.yaml)
 [![NPM](https://nodei.co/npm/@miyauci/result.png?mini=true)](https://nodei.co/npm/@miyauci/result/)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 
 Minimum result type port of Rust.
+
+[Option](https://github.com/TomokiMiyauci/option) version.
 
 ## Table of Contents <!-- omit in toc -->
 
