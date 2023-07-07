@@ -1,3 +1,10 @@
+# [2.0.0-beta.2](https://github.com/TomokiMiyauci/result-js/compare/2.0.0-beta.1...2.0.0-beta.2) (2023-07-07)
+
+
+### Features
+
+* **transform:** add mapOr transform operator ([d969bd9](https://github.com/TomokiMiyauci/result-js/commit/d969bd9c602e75e12769ddda3b13d2aaa54ea717))
+
 # [2.0.0-beta.1](https://github.com/TomokiMiyauci/result-js/compare/1.0.0...2.0.0-beta.1) (2023-07-07)
 
 
