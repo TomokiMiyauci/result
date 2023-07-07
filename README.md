@@ -66,7 +66,7 @@ assertThrows(() => unwrap(opt));
 ```
 
 All [operators](https://deno.land/x/result_js/mod.ts#Functions) for
-[Result](https://deno.land/x/optio/mod.ts?s=Result) are separated from
+[Result](https://deno.land/x/result_js/mod.ts?s=Result) are separated from
 prototype.
 
 ## API
