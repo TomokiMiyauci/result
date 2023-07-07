@@ -1,24 +1,20 @@
 {
   "tasks": {
-    "test": "deno test --doc"
-  },
-  "compilerOptions": {
-    "noUncheckedIndexedAccess": true
+    "test": "deno test --import-map=./_test_import_map.json --doc",
+    "build:npm": "deno run -A --no-lock _tools/build_npm.ts"
   },
   "fmt": {
-    "files": {
-      "exclude": ["CHANGELOG.md", "CODE_OF_CONDUCT.md"]
-    }
+    "exclude": ["CHANGELOG.md"]
   },
   "lint": {
-    "files": {
-      "exclude": ["CHANGELOG.md", "CODE_OF_CONDUCT.md"]
-    }
+    "exclude": ["CHANGELOG.md"]
   },
   "test": {
-    "files": {
-      "exclude": ["CHANGELOG.md", "CODE_OF_CONDUCT.md", "specs/api.md"]
-    }
+    "exclude": ["CHANGELOG.md", "npm"]
   },
-  "importMap": "_test_import_map.json"
+  "compilerOptions": {
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true
+  }
 }
