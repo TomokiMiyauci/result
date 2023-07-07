@@ -30,11 +30,13 @@ export interface Ok<T> extends Container {
   get get(): T;
 }
 
+/** {@linkcode Ok} constructor. */
 export interface OkConstructor {
   /** {@linkcode Ok} value of type {@linkcode T} . */
   <const T>(value: T): Ok<T>;
 }
 
+/** {@linkcode Err} constructor. */
 export interface ErrConstructor {
   /** {@linkcode Err} value of type {@linkcode E} . */
   <const E>(value: E): Err<E>;
