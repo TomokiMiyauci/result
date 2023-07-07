@@ -3,7 +3,7 @@
 
 /** Error handling with the {@linkcode Result} type.
  * {@linkcode Result<T, E>} is the type used for returning and propagating errors.
- * It is an enum with the variants, {@linkcode Ok(T)}, representing success and containing a value, and {@linkcode Err(E)}, representing error and containing an error value.
+ * It is an enum with the variants, {@linkcode Ok<T>}, representing success and containing a value, and {@linkcode Err<E>}, representing error and containing an error value.
  *
  * ## Operators overview
  * {@linkcode Result} provides a wide variety of different operators.
