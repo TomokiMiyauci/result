@@ -2,7 +2,7 @@
 // This module is browser compatible.
 
 import { isErr, isOk } from "./query.ts";
-import { Ok, type Result } from "../spec.ts";
+import { Err, Ok, type Result } from "../spec.ts";
 
 /** Maps a {@linkcode Result<T, E>} to {@linkcode Result<U, E>} by applying {@linkcode fn} to a contained {@linkcode Ok}, leaving an {@linkcode Err}.
  *
@@ -23,6 +23,29 @@ export function map<T, E, U>(
   fn: (value: T) => U,
 ): Result<U, E> {
   if (isOk(result)) return Ok(fn(result.get));
+
+  return result;
+}
+
+/** Maps a {@linkcode Result<T, E>} to {@linkcode Result<T, F>} by applying {@linkcode fn} to a contained {@linkcode Err} value, leaving an {@linkcode Ok}.
+ *
+ * @example
+ * ```ts
+ * import { Err, type Result } from "https://deno.land/x/result_js/spec.ts";
+ * import { mapErr } from "https://deno.land/x/result_js/operators/transform.ts";
+ * import { assertEquals } from "https://deno.land/std/testing/asserts.ts";
+ *
+ * const result: Result<unknown, string> = Err("Hello, World!");
+ * const resultLen = mapErr(result, (v) => v.length);
+ *
+ * assertEquals(resultLen, Err(13));
+ * ```
+ */
+export function mapErr<T, E, F>(
+  result: Result<T, E>,
+  fn: (value: E) => F,
+): Result<T, F> {
+  if (isErr(result)) return Err(fn(result.get));
 
   return result;
 }

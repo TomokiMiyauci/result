@@ -71,7 +71,7 @@ export {
 } from "./spec.ts";
 export { isErr, isOk } from "./operators/query.ts";
 export { and, andThen, or, orElse } from "./operators/logical.ts";
-export { map, mapOr, mapOrElse } from "./operators/transform.ts";
+export { map, mapErr, mapOr, mapOrElse } from "./operators/transform.ts";
 export {
   expect,
   expectErr,

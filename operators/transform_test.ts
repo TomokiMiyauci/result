@@ -1,6 +1,6 @@
 // Copyright © 2023 Tomoki Miyauchi. All rights reserved. MIT license.
 
-import { map, mapOr, mapOrElse } from "./transform.ts";
+import { map, mapErr, mapOr, mapOrElse } from "./transform.ts";
 import { Err, Ok } from "../spec.ts";
 import {
   assertEquals,
@@ -29,6 +29,28 @@ describe("map", () => {
     const optionLen = map(option, fn);
 
     assertEquals(optionLen, Err(""));
+    assertSpyCalls(fn, 0);
+  });
+});
+
+describe("mapErr", () => {
+  it("should call mapper if it is Err", () => {
+    const INPUT = "Hello, World!";
+    const option: Err<string> = Err(INPUT);
+    const fn = spy((v: string) => v.length);
+    const optionLen = mapErr(option, fn);
+
+    assertEquals(optionLen, Err(13));
+    assertSpyCalls(fn, 1);
+    assertSpyCallArgs(fn, 0, [INPUT]);
+  });
+
+  it("should not call mapper function if it is Ok", () => {
+    const result: Ok<number> = Ok(0);
+    const fn = spy((v: string) => v.length);
+    const optionLen = mapErr(result, fn);
+
+    assertEquals(optionLen, Ok(0));
     assertSpyCalls(fn, 0);
   });
 });
