@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/TomokiMiyauci/result/compare/1.0.0...2.0.0) (2023-07-07)
+
+
+### Features
+
+* **extract:** add extract operators ([497626f](https://github.com/TomokiMiyauci/result/commit/497626fc11ca6a2db4d10fc03f0b90fc4b4c4825))
+* **logical:** add logical operators ([a159d31](https://github.com/TomokiMiyauci/result/commit/a159d31654ef33c2e21a5b42b63e17968f26e3f4))
+* **mod:** export related modules ([e033f82](https://github.com/TomokiMiyauci/result/commit/e033f82713df356d3b9d8dffc69de424051a22e4))
+* **mod:** remove all API ([0919773](https://github.com/TomokiMiyauci/result/commit/0919773137c0a7cf9c6270b5ed5bc34cf4b1ccb5))
+* **query:** add query operators ([8ced6fd](https://github.com/TomokiMiyauci/result/commit/8ced6fd3fa099a52fef2a99757a3a2097c377eae))
+* **spec:** add specification interface and type constructor ([1dfcc9a](https://github.com/TomokiMiyauci/result/commit/1dfcc9a4c6756c8d4fa1e93bad0b87b4be012a30))
+* **transform:** add mapOr transform operator ([d969bd9](https://github.com/TomokiMiyauci/result/commit/d969bd9c602e75e12769ddda3b13d2aaa54ea717))
+* **transform:** add transform operator ([9bb241b](https://github.com/TomokiMiyauci/result/commit/9bb241bf639958d172a655a82dd9f247d2a58330))
+
+
+### BREAKING CHANGES
+
+* **mod:** remove all API
+
 # [2.0.0-beta.2](https://github.com/TomokiMiyauci/result-js/compare/2.0.0-beta.1...2.0.0-beta.2) (2023-07-07)
 
 
